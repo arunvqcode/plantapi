@@ -133,7 +133,7 @@ def build(request):
 
     encoder = LabelEncoder()
     y = encoder.fit_transform(label_arr)
-    y = to_categorical(y,11)
+    y = to_categorical(y,12)
     X = data_arr/255
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=10)
@@ -155,7 +155,7 @@ def build(request):
     model.add(Dense(128, activation='relu'))
     model.add(Dense(64, activation='relu'))
     model.add(Dropout(rate=0.5))
-    model.add(Dense(11, activation = "softmax"))
+    model.add(Dense(12, activation = "softmax"))
 
 
     datagen = ImageDataGenerator(
@@ -215,12 +215,12 @@ def match(request):
         t_img = Image.open(img)
         t_img.save(f'static/target_image.jpeg')
         matched_img = predict_flower_class('static/target_image.jpeg', model, encoder)
-        print('Matched image:', matched_img)
+    
 
         # info = ['static/target_image.jpeg', img_index, img_title, Shortest_image,  shortest_dc, desc ]
         output = 'target Image :  {}<br><bt>Matched Image : {}'.format(img_name, matched_img)
         data = dataset[dataset['Title'].str.contains(matched_img.split(' ')[0])].values
-        print('Dataset:', dataset)
+        
 
         title = data[0][1]
         desc = data[0][2]
