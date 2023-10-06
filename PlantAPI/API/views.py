@@ -215,22 +215,24 @@ def match(request):
         t_img = Image.open(img)
         t_img.save(f'static/target_image.jpeg')
         matched_img = predict_flower_class('static/target_image.jpeg', model, encoder)
+        print('Matched image:', matched_img)
+
         # info = ['static/target_image.jpeg', img_index, img_title, Shortest_image,  shortest_dc, desc ]
         output = 'target Image :  {}<br><bt>Matched Image : {}'.format(img_name, matched_img)
         data = dataset[dataset['Title'].str.contains(matched_img.split(' ')[0])].values
+        print('Dataset:', dataset)
+
         title = data[0][1]
         desc = data[0][2]
         img_ = data[0][3]
         print(img_)
         target_img = 'static/target_image.jpeg'
         info = {'info': [target_img, title, desc, img_]}
-        return render(request, "result.html", context=info) 
-
-
-        
+        return render(request, "result.html", context=info)  
+           
     return render(request, "matching.html")     
 
-    
+
 
 def reslt(request):
     return render(request, 'result.html')
