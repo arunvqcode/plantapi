@@ -16,8 +16,8 @@ Na taj način smanjuje upale i povećava apsorpciju hranjivih materija. Poboljš
 šećera u krvi, jača srčani mišić, snižava nivo holesterola u krvi i krvni pritisak, sadrži faktore koji uništavaju
 tumore, podstiče imunološki sistem. Kao dopunska terapija, smanjuje štetne nuspojave hemo i radio terapije.
 Ublažava simptome astme i alergija. Ublažava akutne i hronične upale.Pomaže kod neuralgija, išijasa i
-glavobolje.Izvanredna je za suvu, osetljivu i oštećenu kožu
-Način upotrebe. Najviše se upotrebljava gel koji se dobija iz lista, a upotrebljava se i kao čaj i tinktura.",static/matchings/Aloe_Vera.jpeg
+glavobolje.Izvanredna je za suvu, osetljivu i oštećenu kožu   
+Način upotrebe. Najviše se upotrebljava gel koji se dobija iz lista, a upotrebljava se i kao čaj i tinktura.",PlantAPI/static/matchings/Aloe_Vera.jpeg
 1,Anđelika - Angelica sylvestris,"Botaničke karakteristike. Anđelika je dvogodišnja biljka iz porodice štitarki.Listovi su veliki i trostruko perasti sa
 ovalnim našiljenim listićima. Na vrhu stabljike u nakupinama ima skupljene cvetiće bele ili zelenkaste boje. Debela
 stabljika naraste i preko dva metra visine i često je crvenkastosjajna. Grana se samo na gornjim delovima. Koren
@@ -31,7 +31,7 @@ menstruacije.
 Način upotrebe. Ekstrat sirove biljke,čaj,prah. Čaj se priprema tako što se 10gr korena i 10g ploda (semena)
 prelije sa pola litre ključale vode. Još jače deluje ako se u litru belog vina 25 g korena natapa 24 sata i od toga se
 uzima dvaput dnevno po jedna čašica. Kupka se priprema tako što se na tri litre ključale vode stavi 250 g korena i
-ostavi da stoji 10 minuta; tada se doda vodi za kupanje.",static/matchings/Andjelica.jpg
+ostavi da stoji 10 minuta; tada se doda vodi za kupanje.",PlantAPI/static/matchings/Anglic.jpeg
 2,Anis - Pimpinella anisum,"Botaničke karakteristike. Anis je jednogodišnja biljka visine 50-100cm. Stabljika je šuplja, razgranata i
 pokrivena dlačicama. Donji listovi su okruglasto-brežuljkasti, a gornji tri puta rasporeni. Cvetovi su beli, sastavljeni
 u štitovima. Plodovi su obrnuto-kruškastog oblika i prilegnuto dlakavi, zeleno-sive boje.
@@ -42,7 +42,7 @@ makro i mikroelemente.
 Primena. Anis se koristi protiv astme, kašlja, za pojačavanje apetita, kod nesanice, histerije, slabog želuca,
 plućnih bolesti i nadimanja.
 Način upotrebe. Za čaj se uzima jedna kašikica na 200 g ključale vode ili u obliku praška četvrt kašikice i zalije
-vodom. Može se koristiti i prah anisa pomešan sa medom.",static/matchings/Anis.jpg
+vodom. Može se koristiti i prah anisa pomešan sa medom.",PlantAPI/static/matchings/Anis.jpeg
 3,Arnika - Arnica montana," Botaničke karakteristike. Arnika je višegodišnja biljka. Podzemni deo je debeo i valjkast. Iz njega izraste slabo
 razgranata stabljika visoka do 50 cm sa jednom ili tri cvetne glavice, zlatnožute boje, smeštene pojedinačno na
 vrhu stabljike. Cveta od juna do avgusta, ima specifično smolasti miris. Listovi su smešteni pri dnu i dugoljasto-
@@ -52,25 +52,25 @@ Upotrebljivi delovi biljke. Za lek se koriste cvet, listovi i koren.
 Hemijski sastav. Sadrži arnicin, eterično ulje, smolu, vosak, tanine, šećer, organske kiseline, karotinoide
 (zeaksantin), vitaminC, flavonoide, poliacetilene, makro i mikroelemente.
 Primena. Arnika povoljno deluje na uboje i sveže rane koje krvare usled povreda, kod iscrpljenosti organizma,
-bolesti srca i živaca, paralize i kapi u mozgu.",static/matchings/Arnika.jpeg
+bolesti srca i živaca, paralize i kapi u mozgu.",PlantAPI/static/matchings/Arnica.jpeg
 4,Bela detelina,"Botaničke karakteristike.Višegodišnja zeljasta biljka.Ima snažan koren,koji ima razvijen sistem za sakupljanje
 azota, koji se zatim pretvara u nitrat.Stablo je golo i puzavo dugo do 40 sm.Listovi su trodelni,sa tri liske na
 kojima postoji beličasta šara.Cvetovi obrazuju glavičaste cvasti ,na dugim drškama,okrugle i rastresite.Plod je
 mahuna,sa tri semena koji su u početku narandzasto žuti a potom mrki.
 Stanište.Raste uglavnom u niziji na većim nadmorskim visinama,a uzgaja se i po parkovima.
-Primena.Koristi se protiv gihta, reumatizma i groznice.Čaj se upotrebljava za čišćenje krvi.",static/matchings/Bela_detelina.jpeg
+Primena.Koristi se protiv gihta, reumatizma i groznice.Čaj se upotrebljava za čišćenje krvi.",PlantAPI/static/matchings/Bela_detelina.jpeg
 5,Belonoga,"Botaničke karakteristike.Višegodišnja ,ukrasna zeljasta biljka,izraste do 1 m.Stabljika račvasta,listovi uski i
 dugački.Cvetovi ružičaste boje.
 Stanište.Raste na vlažnim mestima.
 Upotrebljivi delovi biljke.Koren.
 Hemijski sastav.Saponizidi.
-Primena.Smatra se da je dobar ekspektorans.",static/matchings/Belonoga.jpeg
+Primena.Smatra se da je dobar ekspektorans.",PlantAPI/static/matchings/Belonoga.jpeg
 6,Bob – Vicia faba,"Botaničke karakteristike.Jednogodišnja zeljasta biljka,visoka do 1,5 m.Lišće sitno,okruglasto.Cvetovi beli.Plod je
 mahuna.
 Stanište.Raste u baštama,gaji se za ishranu.
 Upotrebljivi delovi biljke.Cvet i mahuna.
 Hemijski sastav.Asparagin,tirozin,leucin.
-Primena.Cvet ublažava bolove i pomaže kod izbacivanja kamenca.Dobar je lek kod upale bešike.",static/matchings/Bob-vicia.jpeg
+Primena.Cvet ublažava bolove i pomaže kod izbacivanja kamenca.Dobar je lek kod upale bešike.",PlantAPI/static/matchings/Bob-vicia.jpeg
 7,Bokvica uskolisna- Plantago lanceolata,"Botaničke karakteristike. Muška (uskolisna) bokvica je višegodišnja zeljasta biljka visoka 10-30 cm. Ima
 uspravnu stabljiku sa 5 uzdužnih brazdi. Listovi se nalaze pri osnovi stabljike, imaju kratku dršku, lancetastog
 oblika sa 3-7 paralelnih nerava, sa celim ivicama. Cvetovi su sakupljeni u gust cilindrični klas dug 2-5 cm. Cveta
@@ -84,7 +84,7 @@ tuberkuloze. Čisti krv, pluća i želudac kao nijedna druga biljka. Koristi se 
 rana koje teško zarastaju, čak i otvorenih, ogrebotina, posekotina, uboda osa, kod ugriza besnih pasa. Pomaže kod
 gušavosti, tromboze, oboljenja jetre i bešike.
 Način upotrebe. Čaj: jednu punu malu kašiku listova popariti sa četvrt litre vode i ostaviti da odstoji kratko
-vreme. Čajna mešavina: jednu punu malu kašiku mešavine istih delova lista bokvice i timijana popariti sa četvr",static/matchings/Bokvica uskolisna.jpg
+vreme. Čajna mešavina: jednu punu malu kašiku mešavine istih delova lista bokvice i timijana popariti sa četvr",PlantAPI/static/matchings/Bokvica_uskolisna.jpeg
 8,Borač – Borago officinalis,"Botaničke karakteristike.Jednogodišnja biljka čije je stablo visoko da 60 sm. Sočno i obraslo dlakama.Listovi
 naizmenično raspoređeni,donji sakupljeni u rozetu.Po obliku jajasti,talasasto nabrani.Cvet plav ili beo.
 Stanište.Raste divlji na đubristima,livadama,obalama jezera.
@@ -92,14 +92,14 @@ Upotrebljivi delovi biljke.List,cvet i cela biljka.
 Hemijski sastav.Tanin,saponin,etarsko ulje,masne i smolne kiseline,kalcium malat,kalium nitrat.U mladoj biljci
 ima alantoina.
 Primena.Kao čaj za otvrdnute jetre,a toplim oblozima leče se zapaljenje očiju.Kalium nitrat izaziva pojačano
-znojenje i mokrenje.Cvetni čaj olaksava iskašljavanje.Svež sok utiče na brzo izbacivanje hlorida.",static/matchings/Borač–Borago.jpg
+znojenje i mokrenje.Cvetni čaj olaksava iskašljavanje.Svež sok utiče na brzo izbacivanje hlorida.",PlantAPI/static/matchings/Borač–Borago.jpg
 9,Bulka – Papaver rhoeas,"Botaničke karakteristike.Jednogodišnja biljka,visoka do 1m.Lišće je veliko,perasto,sedece.Cvetovi su usamljeni
 na vrhu stable,jarko crvene boje,sa 4 krunicna listica.Ako se biljka zasece potecice mleko.
 Stanište.Raste svuda kao korov.
 Upotrebljivi delovi biljke.koriste se cvetovi koji su nezni i dok su svezi veoma su oporog mirisa.Beru se po
 suvom vremenu,suse brzo u sto tanjem sloju.
 Hemijski sastav.Alkaloid reading,readinska kiselina,mason ulje,smola,sluz,guma,šećer.
-Primena.Kao lek protiv kašlja jer sadrzi dosta sluzi ali i za prehladu.",static/matchings/Bulka.jpeg
+Primena.Kao lek protiv kašlja jer sadrzi dosta sluzi ali i za prehladu.",PlantAPI/static/matchings/Bulka.jpeg
 10,Kleka - Juniperus communis,"Narodna imena. Barovica, borovac, brika, brinje, klekovina, obicna borovica, smrek, smreka, smrekovina, smreč,
 smrika, smriča, smrkva, šmrča, fenja, crna smrekinja, crna smrekva.
 Botaničke karakteristike. Kleka raste kao manje više zimzelen uspravan grm. Ima igličaste listove koji stoje po
@@ -108,14 +108,14 @@ plodovi koji te godine ostaju zeleni. Dozrevaju tek iduće godine u jesen, kad p
 Čitava biljka je lekovita, ali se najčešće koriste plodovi. Lekoviti su samo potpuno zreli plodovi.
 Stanište. Kleka uspeva na kamenitim i kraškim terenima od primorskih do planinskih i brdskih područja. Kod nas
 se najviše nalazi po brdskim i planinskim suvim krčevinama, pašnjacima,
-suvatima, zapuštenim i neobrađenim zemljištima.",static/matchings/Kleka.jpeg
+suvatima, zapuštenim i neobrađenim zemljištima.",PlantAPI/static/matchings/Kleka.jpeg
 11,Money plant - Epipremnum aureum,"Epipremnum aureum je vrsta iz porodice arum Araceae,
 porijeklom iz Mo'oree na Društvenim otocima Francuske Polinezije.
 Vrsta je popularna sobna biljka u umjerenim regijama, ali je također postala naturalizirana,
 u tropskim i subtropskim šumama diljem svijeta, uključujući sjevernu Južnu Afriku, Australiju,
 Jugoistočna Azija, Južna Azija,
 pacifičko otočje i Zapadna Indija,
-gdje je u nekim slučajevima prouzročio ozbiljne ekološke štete.",static/matchings/Money_plant.jpeg
+gdje je u nekim slučajevima prouzročio ozbiljne ekološke štete.",PlantAPI/static/matchings/Money_plant.jpeg
 12,Bamboo - Bambusa,"Bambusi su raznolika skupina većinom zimzelenih višegodišnjih cvjetnica,
 čine potporodicu Bambusoideae porodice trava Poaceae.
 Divovski bambusi najveći su članovi porodice trava, u slučaju Dendrocalamus sinicus pojedinačni listovi dosežu duljinu od 46 metara,
@@ -123,4 +123,4 @@ debljine do 36 centimetara i težine do 450 kilograma.
 Internodije bambusa također mogu biti velike dužine. Kinabaluchloa wrayi ima internodije do 2,5 metara duljine,
 i Arthrostylidium schombergkii s donjim internodijama do 5 metara duljine, premašuje ih samo papirus.
 Nasuprot tome, listovi sićušnog bambusa Raddiella vanessiae iz savana Francuske Gvajane,
-su samo 10-20 milimetara u duljinu i oko dva milimetra u širinu.",static/matchings/Bamboo.jpeg
+su samo 10-20 milimetara u duljinu i oko dva milimetra u širinu.",PlantAPI/static/matchings/Bamboo.jpeg

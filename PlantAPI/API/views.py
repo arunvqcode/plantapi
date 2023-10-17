@@ -12,7 +12,8 @@ import math
 import warnings
 import cv2
 import os
-
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.callbacks import EarlyStopping
 #Encoding and Split data into Train/Test Sets
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.utils import to_categorical
@@ -23,6 +24,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Flatten, Activation, Conv2D, MaxPooling2D
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import Adam,SGD,Adagrad,Adadelta,RMSprop
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+from tensorflow.keras.applications import ResNet50
 
 warnings.filterwarnings('ignore')
 
@@ -113,19 +116,17 @@ def upload(request):
 
 
 def build(request):
-
     folder_dir = 'static/Images'
     data = []
     label = []
-
-    SIZE = 128 #Crop the image to 128x128
+    SIZE = 128  # Crop the image to 128x128
 
     for folder in os.listdir(folder_dir):
         for file in os.listdir(os.path.join(folder_dir, folder)):
             label.append(folder)
             img = cv2.imread(os.path.join(folder_dir, folder, file))
             img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            im = cv2.resize(img_rgb, (SIZE,SIZE))
+            im = cv2.resize(img_rgb, (SIZE, SIZE))
             data.append(im)
 
     data_arr = np.array(data)
@@ -133,55 +134,52 @@ def build(request):
 
     encoder = LabelEncoder()
     y = encoder.fit_transform(label_arr)
-    y = to_categorical(y,13)
-    X = data_arr/255
+    y = to_categorical(y, 13)
+    X = data_arr / 255.0
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=10)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=10, shuffle=True)
 
-    with open('static/encorder.pkl', 'wb') as f:
+    with open('static/encoder.pkl', 'wb') as f:
         pickle.dump(encoder, f)
 
-
     model = Sequential()
-    model.add(Conv2D(filters = 64, kernel_size = (3,3),padding = 'Same',activation ='relu', input_shape = (SIZE,SIZE,3)))
-    model.add(MaxPooling2D(pool_size=(2,2)))
+    model.add(Conv2D(filters=64, kernel_size=(3, 3), padding='same', activation='relu', input_shape=(SIZE, SIZE, 3)))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
 
-    model.add(Conv2D(filters = 128, kernel_size = (3,3),padding = 'Same',activation ='relu'))
-    model.add(Conv2D(filters = 128, kernel_size = (3,3),padding = 'Same',activation ='relu'))
-    model.add(Conv2D(filters = 128, kernel_size = (3,3),padding = 'Same',activation ='relu'))
-    model.add(MaxPooling2D(pool_size=(2,2)))
+    model.add(Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation='relu'))
+    model.add(Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation='relu'))
+    model.add(Conv2D(filters=128, kernel_size=(3, 3), padding='same', activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
 
     model.add(Flatten())
     model.add(Dense(128, activation='relu'))
-    model.add(Dense(64, activation='relu'))
     model.add(Dropout(rate=0.5))
-    model.add(Dense(13, activation = "softmax"))
-
+    model.add(Dense(64, activation='relu'))
+    model.add(Dense(13, activation="softmax"))
 
     datagen = ImageDataGenerator(
-            rotation_range=20,
-            zoom_range = 0.20,
-            width_shift_range=0.3,
-            height_shift_range=0.3,
-            horizontal_flip=True,
-            vertical_flip=True)
+        rotation_range=40,
+        zoom_range=0.20,
+        width_shift_range=0.3,
+        height_shift_range=0.3,
+        horizontal_flip=True,
+        vertical_flip=True)
 
     datagen.fit(X_train)
 
+    model.compile(optimizer=Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
+    batch_size = 32
+    epochs = 64
+    model.fit_generator(datagen.flow(X_train, y_train, batch_size=batch_size),
+                        epochs=epochs,
+                        validation_data=(X_test, y_test),
+                        verbose=1)
 
-    model.compile(optimizer=Adam(lr=0.0001),loss='categorical_crossentropy',metrics=['accuracy'])
-    batch_size=32
-    epochs=64
-    model.fit_generator(datagen.flow(X_train,y_train, batch_size=batch_size),
-                                epochs = epochs,
-                                validation_data = (X_test,y_test),
-                                verbose = 1)
-    
-    model.save('static/model')
+    model.save('static/model')  # Save the model as a SavedModel
 
-    return HttpResponse('Done')
+    return HttpResponse('Training completed and model saved.')
 
-
+# Function to predict the flower class for a given image
 def predict_flower_class(image_path, model, encoder):
     SIZE = 128
 
@@ -201,13 +199,12 @@ def predict_flower_class(image_path, model, encoder):
 
 
 
-
 def match(request):
     if request.method == 'POST':
         dataset = pd.read_csv('static/info.csv')
         model = tf.keras.models.load_model('static/model')
         encoder = ''
-        with open('static/encorder.pkl', 'rb') as f:
+        with open('static/encoder.pkl', 'rb') as f:
             encoder = pickle.load(f)
 
         img = request.FILES['image']
@@ -236,4 +233,11 @@ def match(request):
 
 def reslt(request):
     return render(request, 'result.html')
+
+
+
+
+
+
+
 
